@@ -13,7 +13,9 @@ app.use((req, res, next) => {
   next();
 });
 app.use('/', api);
+
+const port = process.env.PORT || '4200';
 app.set('port', port);
 
 const server = http.createServer(app);
-server.listen(port, () => console.log(`Running on port ${port}`));
+server.listen(port, () => console.log(`API running on localhost:${port}`));
