@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const http = require('http');
 const bodyParser = require('body-parser');
@@ -6,7 +5,6 @@ const api = require('./api.js');
 const port = process.env.PORT || '4200';
 const app = express();
 
-// define middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use((req, res, next) => {
